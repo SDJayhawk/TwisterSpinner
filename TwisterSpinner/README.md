@@ -11,4 +11,3 @@ ToDo: Clear extra empty space below the spinner
 ToDo: Add advertising
 
 ToDo: Add subscription option to remove advertising
-
