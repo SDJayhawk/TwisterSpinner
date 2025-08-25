@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State var spinController = SpinController()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            Tab("Spinner", systemImage:
+                    "arrow.trianglehead.2.counterclockwise.rotate.90") {
+                SpinnerBoardView(spinController: $spinController)
+            }
+            Tab("History", systemImage: "clock"){
+                HistoryView()
+            }
+            Tab("About", systemImage: "info.circle"){
+                AboutView()
+            }
         }
-        .padding()
     }
 }
 
