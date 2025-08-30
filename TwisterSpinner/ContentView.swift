@@ -9,19 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State var spinController = SpinController()
+    @State var spinController: SpinController
 
+    init() {
+        self.spinController = SpinController()
+    }
+    
     var body: some View {
         TabView {
-            Tab("Spinner", systemImage:
-                    "arrow.trianglehead.2.counterclockwise.rotate.90") {
+            NavigationStack {
                 SpinnerBoardView(spinController: $spinController)
+                    .navigationTitle("Spinner")
             }
-            Tab("History", systemImage: "clock"){
-                HistoryView()
+            .tabItem {
+                Label("Spinner", systemImage:
+                        "arrow.trianglehead.2.counterclockwise.rotate.90")
             }
-            Tab("About", systemImage: "info.circle"){
+            NavigationStack {
+                HistoryView(spinController: $spinController)
+                    .navigationTitle("History")
+            }
+            .tabItem {
+                Label("History", systemImage: "clock")
+            }
+            NavigationStack {
                 AboutView()
+            }
+            .tabItem {
+                Label("About", systemImage: "info.circle")
             }
         }
     }

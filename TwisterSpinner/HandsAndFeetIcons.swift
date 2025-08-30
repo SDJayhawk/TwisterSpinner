@@ -10,35 +10,71 @@ import SwiftUI
 
 struct HandsAndFeetIcons: View {
     let side: Double
+    let sizeAdjustment: Double
+    let offsetAdjustment: Double
+    
+    let sizeAdjustmentFactor = 9.0
+    let offsetAdjustmentFactor = 3.0
 
+    init(side: Double) {
+        self.side = side
+        sizeAdjustment = side/sizeAdjustmentFactor
+        offsetAdjustment = side/offsetAdjustmentFactor
+    }
+    
     var body: some View {
             Grid {
                 GridRow {
-                    IconView(imageName: "foot.left", size: side/6, yOffset: -side/3, anchor: .topLeading)
+                    LabelAboveIconView(label: Appendage.leftFoot.displayName, imageName: Appendage.leftFoot.getImageName, size: sizeAdjustment, yOffset: -offsetAdjustment, anchor: .topLeading)
                     Spacer()
-                    IconView(imageName: "hand.right", size: side/6, yOffset: -side/3, anchor: .topTrailing)
+                    LabelAboveIconView(label: Appendage.rightHand.displayName, imageName: Appendage.rightHand.getImageName, size: sizeAdjustment, yOffset: -offsetAdjustment, anchor: .topTrailing)
                 }
                 
                 GridRow {
-                    IconView(imageName: "hand.left", size: side/6, yOffset: side/3, anchor: .bottomLeading)
+                    LabelBelowIconView(label: Appendage.leftHand.displayName, imageName: Appendage.leftHand.getImageName, size: sizeAdjustment, yOffset: offsetAdjustment, anchor: .bottomLeading)
                     Spacer()
-                    IconView(imageName: "foot.right", size: side/6, yOffset: side/3, anchor: .bottomTrailing)
+                    LabelBelowIconView(label: Appendage.rightFoot.displayName, imageName: Appendage.rightFoot.getImageName, size: sizeAdjustment, yOffset: offsetAdjustment, anchor: .bottomTrailing)
                 }
             }
     }
 }
 
-struct IconView: View {
+struct LabelAboveIconView: View {
+    let label: String
     let imageName: String
     let size: CGFloat
     let yOffset: CGFloat
     let anchor: UnitPoint
     
     var body: some View {
-        Image(imageName)
-            .resizable()
-            .frame(width: size, height: size)
-            .gridCellAnchor(anchor) // Align to top-leading corner
-            .offset(x: 0, y: yOffset)
+        VStack {
+            Text(label)
+                .font(.headline)
+
+            Image(imageName)
+                .resizable()
+                .frame(width: size, height: size)
+                .gridCellAnchor(anchor) // Align to top-leading corner
+        }
+        .offset(x: 0, y: yOffset)
+    }
+}
+
+struct LabelBelowIconView: View {
+    let label: String
+    let imageName: String
+    let size: CGFloat
+    let yOffset: CGFloat
+    let anchor: UnitPoint
+    
+    var body: some View {
+        VStack {
+            Image(imageName)
+                .resizable()
+                .frame(width: size, height: size)
+                .gridCellAnchor(anchor) // Align to top-leading corner
+            Text(label)
+        }
+        .offset(x: 0, y: yOffset)
     }
 }

@@ -9,28 +9,24 @@
 import SwiftUI
 
 struct DotCircle: View {
-    let side: Double
+    let squareFrameSize: Double
 
     var body: some View {
             let count: Int8 = 16
-            let dotSize = side / 6.1
-            let radius = (side - dotSize) / 2
+            let circleSize = squareFrameSize / 6.1
+            let radius = (squareFrameSize - circleSize) / 2
             ZStack {
                 ForEach(0..<count, id: \.self) { i in
                     let angle = Angle.degrees(
-                        Double(i) / Double(count) * 360.0 + 10.25
+                        Double(i) / Double(count) * 360.0 + 11.25 // Rotate circles for proper positioning with each quadrant
                     )
                     
                     Circle()
-                        .fill(getColor(i%4)?.color ?? .gray)
-                        .frame(width: dotSize, height: dotSize)
+                        .fill(LandingColor(rawValue: i%4)?.color ?? .gray) // gray should never happen!
+                        .frame(width: circleSize, height: circleSize)
                         .offset(y: -radius)
                         .rotationEffect(angle)
                 }
             }
-    }
-    
-    func getColor(_ i: Int8) -> LandingColor? {
-        return LandingColor(rawValue: i)
     }
 }
