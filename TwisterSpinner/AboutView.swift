@@ -12,7 +12,7 @@ struct AboutView: View {
     var body: some View {
                 
         VStack(alignment: .center) {
-            Text("Twister Spinner")
+            Text(getAppName())
                 .font(.title)
             Text("v\(getVersion())")
         }
@@ -46,6 +46,16 @@ struct AboutView: View {
         
         
         return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown Version"
+    }
+
+    func getAppName() -> String {
+        if let displayName = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String {
+            return displayName
+        } else if let appName = Bundle.main.infoDictionary?["CFBundleName"] as? String {
+            return appName
+        } else {
+            return "Unknown App Name"
+        }
     }
     
 }
