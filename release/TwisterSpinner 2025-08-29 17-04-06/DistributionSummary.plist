@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TwisterSpinner.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>C7E1330E50C29D83728FA9634D2782EA1484767D</string>
+				<key>dateExpires</key>
+				<string>8/29/26</string>
+				<key>type</key>
+				<string>Cloud Managed Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>57N7QWAN6Z.net.sdroses.TwisterSpinner</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>57N7QWAN6Z</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>TwisterSpinner.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>36df985d-6464-4c94-9d0d-97bbb76301d9</string>
+				<key>dateExpires</key>
+				<string>8/29/26</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: net.sdroses.TwisterSpinner</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>57N7QWAN6Z</string>
+				<key>name</key>
+				<string>Steve Rose</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0 beta</string>
+		</dict>
+	</array>
+</dict>
+</plist>
