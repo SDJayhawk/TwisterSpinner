@@ -1,6 +1,6 @@
 //
 //  HistoryView.swift
-//  TwisterSpinner
+//  GameSpinner
 //
 //  Created by Steve Rose on 8/23/25.
 //

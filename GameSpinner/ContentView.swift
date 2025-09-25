@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  TwisterSpinner
+//  GameSpinner
 //
 //  Created by Steve Rose on 8/18/25.
 //

@@ -1,6 +1,6 @@
 //
 //  History.swift
-//  TwisterSpinner
+//  GameSpinner
 //
 //  Created by Steve Rose on 8/25/25.
 //

@@ -1,6 +1,6 @@
 //
 //  HandsAndFeetIcons.swift
-//  TwisterSpinner
+//  GameSpinner
 //
 //  Created by Steve Rose on 8/21/25.
 //

@@ -1,6 +1,6 @@
 //
 //  AboutView.swift
-//  TwisterSpinner
+//  GameSpinner
 //
 //  Created by Steve Rose on 8/23/25.
 //
@@ -18,9 +18,7 @@ struct AboutView: View {
         }
         .padding(.bottom)
         VStack(alignment: .leading) {
-//            Text("This is **bold** text, this is *italic* text, and this is ***bold, italic*** text.")
-//            Text("`Monospaced works too`")
-            Text("Use this app as a replacement for the spinner included with your Twister game.")
+            Text("Use this app as a replacement for the spinner included with your TWISTER® game.")
                 .padding(.bottom)
             Text("Instructions")
                 .font(.headline)
@@ -30,7 +28,7 @@ struct AboutView: View {
                 .padding(.bottom)
             Text("Feedback")
                 .font(.headline)
-            Text("Send comments, questions, and feature requests to : [tspinner@srosesoftware.com](mailto:tspinner@srosesoftware.com)")
+            Text("Send comments, questions, and feature requests to : [https://srosesoftware.com/spinner/](https://srosesoftware.com/spinner/)")
                 .padding(.bottom)
             Spacer()
         }

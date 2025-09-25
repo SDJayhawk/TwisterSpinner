@@ -11,14 +11,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AA05EBA92E53CB8F00AC9A5B /* TwisterSpinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwisterSpinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA05EBA92E53CB8F00AC9A5B /* GameSpinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameSpinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9BA4C52E5CEE69005F5EB4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		AA05EBAB2E53CB8F00AC9A5B /* TwisterSpinner */ = {
+		AA05EBAB2E53CB8F00AC9A5B /* GameSpinner */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TwisterSpinner;
+			path = GameSpinner;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -37,7 +37,7 @@
 		AA05EBA02E53CB8F00AC9A5B = {
 			isa = PBXGroup;
 			children = (
-				AA05EBAB2E53CB8F00AC9A5B /* TwisterSpinner */,
+				AA05EBAB2E53CB8F00AC9A5B /* GameSpinner */,
 				AA05EBAA2E53CB8F00AC9A5B /* Products */,
 				AA9BA4C52E5CEE69005F5EB4 /* README.md */,
 			);
@@ -46,7 +46,7 @@
 		AA05EBAA2E53CB8F00AC9A5B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA05EBA92E53CB8F00AC9A5B /* TwisterSpinner.app */,
+				AA05EBA92E53CB8F00AC9A5B /* GameSpinner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,9 +54,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AA05EBA82E53CB8F00AC9A5B /* TwisterSpinner */ = {
+		AA05EBA82E53CB8F00AC9A5B /* GameSpinner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA05EBB52E53CB9100AC9A5B /* Build configuration list for PBXNativeTarget "TwisterSpinner" */;
+			buildConfigurationList = AA05EBB52E53CB9100AC9A5B /* Build configuration list for PBXNativeTarget "GameSpinner" */;
 			buildPhases = (
 				AA05EBA52E53CB8F00AC9A5B /* Sources */,
 				AA05EBA62E53CB8F00AC9A5B /* Frameworks */,
@@ -68,13 +68,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				AA05EBAB2E53CB8F00AC9A5B /* TwisterSpinner */,
+				AA05EBAB2E53CB8F00AC9A5B /* GameSpinner */,
 			);
-			name = TwisterSpinner;
+			name = GameSpinner;
 			packageProductDependencies = (
 			);
 			productName = TwisterSpinner;
-			productReference = AA05EBA92E53CB8F00AC9A5B /* TwisterSpinner.app */;
+			productReference = AA05EBA92E53CB8F00AC9A5B /* GameSpinner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,14 +85,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1640;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					AA05EBA82E53CB8F00AC9A5B = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
 			};
-			buildConfigurationList = AA05EBA42E53CB8F00AC9A5B /* Build configuration list for PBXProject "TwisterSpinner" */;
+			buildConfigurationList = AA05EBA42E53CB8F00AC9A5B /* Build configuration list for PBXProject "GameSpinner" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -106,7 +106,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA05EBA82E53CB8F00AC9A5B /* TwisterSpinner */,
+				AA05EBA82E53CB8F00AC9A5B /* GameSpinner */,
 			);
 		};
 /* End PBXProject section */
@@ -125,8 +125,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		AAECC4C52E68AA4100B38C13 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -137,7 +136,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nxcrun agvtool next-version -all\n";
 		};
@@ -188,11 +187,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 57N7QWAN6Z;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -212,6 +212,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -252,11 +253,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 57N7QWAN6Z;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -269,6 +271,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -279,14 +282,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TwisterSpinner/TwisterSpinner.entitlements;
+				CODE_SIGN_ENTITLEMENTS = GameSpinner/GameSpinner.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 57N7QWAN6Z;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Twister Spinner";
+				INFOPLIST_KEY_CFBundleDisplayName = "Game Spinner";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -298,7 +304,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
@@ -322,14 +328,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = TwisterSpinner/TwisterSpinner.entitlements;
+				CODE_SIGN_ENTITLEMENTS = GameSpinner/GameSpinner.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 57N7QWAN6Z;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Twister Spinner";
+				INFOPLIST_KEY_CFBundleDisplayName = "Game Spinner";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -341,7 +350,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
@@ -363,7 +372,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA05EBA42E53CB8F00AC9A5B /* Build configuration list for PBXProject "TwisterSpinner" */ = {
+		AA05EBA42E53CB8F00AC9A5B /* Build configuration list for PBXProject "GameSpinner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA05EBB32E53CB9100AC9A5B /* Debug */,
@@ -372,7 +381,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA05EBB52E53CB9100AC9A5B /* Build configuration list for PBXNativeTarget "TwisterSpinner" */ = {
+		AA05EBB52E53CB9100AC9A5B /* Build configuration list for PBXNativeTarget "GameSpinner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA05EBB62E53CB9100AC9A5B /* Debug */,

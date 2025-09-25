@@ -1,4 +1,4 @@
-#  TwisterSpinner app
+#  GameSpinner app
 
 ToDo: Allow for a different layout on iPad horizontal orientation (history on the side)
 

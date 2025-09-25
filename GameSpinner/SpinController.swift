@@ -1,6 +1,6 @@
 //
 //  swift
-//  TwisterSpinner
+//  GameSpinner
 //
 //  Created by Steve Rose on 8/19/25.
 //

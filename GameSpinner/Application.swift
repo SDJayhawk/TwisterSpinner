@@ -1,6 +1,6 @@
 //
-//  TwisterSpinnerApp.swift
-//  TwisterSpinner
+//  Application.swift
+//  GameSpinner
 //
 //  Created by Steve Rose on 8/18/25.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct TwisterSpinnerApp: App {
+struct Application: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
